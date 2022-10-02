@@ -1,0 +1,19 @@
+.carousel{
+    text-align: center;
+    padding: 2%;
+    width: 100vw;
+  }
+  
+  .carousel-style {
+    height: 100%;
+  }
+    
+  .carousel.slide img {
+    width: auto;
+    height: 90vh;
+  }
+    
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
