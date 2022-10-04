@@ -15,7 +15,7 @@ const BarraNav = () => {
               <Link className="link" to="/">
                 Inicio
               </Link>
-              <Link className="link" to="/inicio">
+              <Link className="link" to="/juego">
                 Jugar
               </Link>
               <Link className="link" to="/integrantes">
