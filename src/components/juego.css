@@ -1,0 +1,40 @@
+.full-game-area {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sup-game-area {
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+}
+
+.left-game-area {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.pistas-area {
+  padding: 5% 5%;
+}
+
+.palabra-area {
+  padding: 5% 10%;
+}
+
+.right-game-area {
+  width: 40vw;
+}
+
+.inf-game-area {
+  width: 100vw;
+  height: 35vh;
+  padding: 5% 10%;
+  margin: 0 auto;
+  align-items: center;
+}
