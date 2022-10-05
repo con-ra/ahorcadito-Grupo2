@@ -11,11 +11,12 @@ const Juego = () => {
     'Haz click en "Obtener palabra" para empezar'
   );
   const [tecladoDeshabillitado, setTecladoDeshabilitado]= useState(true);
+  const [letraElegida, setLetraElegida] = useState("");
 
   /* Generar botones abecedario */
   const botones = () => {
     return Alfabeto.map((letra) => {
-      return <button key={letra} disabled={tecladoDeshabillitado}> {letra} </button>;
+      return <Button key={letra} disabled={tecladoDeshabillitado} onClick={()=>presionarTecla(letra)}> {letra} </Button>;
     });
   };
 
@@ -31,6 +32,11 @@ const Juego = () => {
     setTecladoDeshabilitado(false);
 
   };
+
+  /* Añadir letra presionada a una variable */
+  const presionarTecla = (letra) => {
+    setLetraElegida(letra);
+  }
 
   return (
     <>
@@ -51,9 +57,9 @@ const Juego = () => {
         <footer className="inf-game-area">
           <div className="teclado"> {botones()} </div>
           <div className="controles">
-            <button className="button-iniciar" onClick={() => iniciarJugada()}>
+            <Button className="button-iniciar" variant="secondary" onClick={() => iniciarJugada()}>
               Obtener palabra
-            </button>
+            </Button>
           </div>
         </footer>
       </div>
