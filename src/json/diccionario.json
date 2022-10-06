@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "pista": "Pista palabra 1",
+        "palabra": "HTML"
+    },
+    {
+        "id": 2,
+        "pista": "Pista palabra 2",
+        "palabra": "BOOTSTRAP"
+    },
+    {
+        "id": 3,
+        "pista": "Pista palabra 3",
+        "palabra": "JAVA"
+    },
+    {
+        "id": 4,
+        "pista": "Pista palabra 4",
+        "palabra": "REACT"
+    },
+    {
+        "id": 5,
+        "pista": "Pista palabra 5",
+        "palabra": "CLASS"
+    }
+]
