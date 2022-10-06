@@ -16,7 +16,7 @@ const Juego = () => {
   /* Generar botones abecedario */
   const botones = () => {
     return Alfabeto.map((letra) => {
-      return <Button key={letra} disabled={tecladoDeshabillitado} onClick={()=>presionarTecla(letra)}> {letra} </Button>;
+      return <Button id={letra} key={letra} disabled={tecladoDeshabillitado} onClick={()=>presionarTecla(letra)}> {letra} </Button>;
     });
   };
 
@@ -30,12 +30,15 @@ const Juego = () => {
     setPista(Diccionario[indPalabra].pista);
     setPalabraEnmascarada(arrayPalabraEnmascarada);
     setTecladoDeshabilitado(false);
-
   };
 
   /* Añadir letra presionada a una variable */
   const presionarTecla = (letra) => {
     setLetraElegida(letra);
+    document.getElementById(letra).disabled = true;
+    /* recorrer el vector buscando la letra */
+    /* Contador de errores con bandera */
+    /* Comparar palabras para victoria */
   }
 
   return (
