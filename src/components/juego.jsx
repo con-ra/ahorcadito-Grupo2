@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import "./juego.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
 
@@ -34,9 +34,18 @@ const Juego = () => {
 
   /* Añadir letra presionada a una variable */
   const presionarTecla = (letra) => {
+    let palabraActualizada = new Array(palabraEnmascarada);
     setLetraElegida(letra);
     document.getElementById(letra).disabled = true;
-    /* recorrer el vector buscando la letra */
+    console.log(palabraActualizada);
+    for(let i=0;i<palabraElegida.length;i++)
+    {
+      if(letra===palabraElegida[i]){
+        palabraActualizada[i]=letra;
+        setPalabraEnmascarada(palabraActualizada);
+        
+      }
+    }
     /* Contador de errores con bandera */
     /* Comparar palabras para victoria */
   }
