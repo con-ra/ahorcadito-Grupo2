@@ -1,19 +1,24 @@
-.carousel{
+.integrantes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0.5%;
+}
+
+.card-full{
+  margin: 0.5%;
   text-align: center;
-  padding: 1%;
-  width: 100vw;
-}
-  
-.carousel-style {
-  height: 100%;
-}
-  
-.carousel.slide img {
-  width: auto;
   height: 85vh;
+  width: 27vw;
 }
-  
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.6);
+
+.card-img{
+  object-fit: contain;
+  margin-top: 2.5%;
+  height: 45vh;
 }
-  
+
+.linea-central-tarjeta{
+  margin-left: 10%;
+  margin-right: 10%;
+}
