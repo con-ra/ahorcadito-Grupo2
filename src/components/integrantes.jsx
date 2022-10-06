@@ -8,7 +8,7 @@ function Integrantes(){
         <img src="/assets/images/integrantes_LópezPolo.jpg" alt="López Polo"/>
         <Carousel.Caption>
           <h3>Lucas Santiago López Polo</h3>
-          <p><a href="https://twitter.com/EruLuka?t=-C9VnMVYIHm2oF1TakZvxA&s=09">Twitter</a></p>
+          <p><a href="https://github.com/EruLuka">GitHub</a></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -16,7 +16,7 @@ function Integrantes(){
         <Carousel.Caption>
           <h3>Nicole Estefania Mendivil Cabrera</h3>
           <p>
-            <a href="https://www.instagram.com/_nicoleca/">Instagram</a>
+            <a href="https://github.com/nicolee567">GitHub</a>
           </p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -25,7 +25,7 @@ function Integrantes(){
         <Carousel.Caption>
           <h3>German Matias Planckensteiner</h3>
           <p>
-          <a href='https://www.instagram.com/mati_planck/'> Instagram </a>
+          <a href='https://github.com/odoexx'> GitHub </a>
           </p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -34,7 +34,7 @@ function Integrantes(){
         <Carousel.Caption>
           <h3>Agustín Cesar Sosa Correa</h3>
           <p>
-            <a href="https://www.facebook.com/profile.php?id=100014236481694">Facebook</a>
+            <a href="https://github.com/Gryuker">GitHub</a>
           </p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -43,7 +43,7 @@ function Integrantes(){
         <Carousel.Caption>
           <h3>Conrado Abel Dario Velazquez</h3>
           <p>
-            <a href='https://www.instagram.com/conra.ue/'> Instagram </a>
+            <a href='https://github.com/con-ra'> GitHub </a>
           </p>
         </Carousel.Caption>
       </Carousel.Item>
