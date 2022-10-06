@@ -37,6 +37,8 @@ const Juego = () => {
     setLetraElegida(letra);
     document.getElementById(letra).disabled = true;
     /* recorrer el vector buscando la letra */
+    /* Contador de errores con bandera */
+    /* Comparar palabras para victoria */
   }
 
   return (
