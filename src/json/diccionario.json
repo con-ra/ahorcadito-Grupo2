@@ -1,22 +1,22 @@
 [
     {
         "id": 1,
-        "pista": "Pista palabra 1",
+        "pista": "Lenguaje de marcado, basico en la programacion web.",
         "palabra": "HTML"
     },
     {
         "id": 2,
-        "pista": "Pista palabra 2",
+        "pista": "Framework front-end de codigo abierto, ofrece estructuras en CSS y HTML",
         "palabra": "BOOTSTRAP"
     },
     {
         "id": 3,
-        "pista": "Pista palabra 3",
+        "pista": "Leguaje de prgramacion origntado a objeto, con una de las comunidades mas grandes del mundo",
         "palabra": "JAVA"
     },
     {
         "id": 4,
-        "pista": "Pista palabra 4",
+        "pista": "Es una biblioteca de Java, es de codigo abierto, su objetivo es renderizan componentes",
         "palabra": "REACT"
     },
     {
