@@ -33,17 +33,16 @@ const Juego = () => {
   };
 
   /* Añadir letra presionada a una variable */
-  const presionarTecla = (letra) => {
-    let palabraActualizada = new Array(palabraEnmascarada);
-    setLetraElegida(letra);
+  const presionarTecla= (letra) => {
+    let palabraActualizada= palabraEnmascarada.map((l)=>(l));
+    /* setLetraElegida(letra); */
     document.getElementById(letra).disabled = true;
-    console.log(palabraActualizada);
-    for(let i=0;i<palabraElegida.length;i++)
+    
+    for(let i=0; i<palabraElegida.length; i++)
     {
-      if(letra===palabraElegida[i]){
-        palabraActualizada[i]=letra;
+      if(letra === palabraElegida[i]){
+        palabraActualizada[i]= letra;
         setPalabraEnmascarada(palabraActualizada);
-        
       }
     }
     /* Contador de errores con bandera */
