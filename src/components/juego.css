@@ -32,7 +32,7 @@
   font-size: xx-large;
   height: 20vh;
 }
-
+/* Imágen vidas restantes */
 .right-game-area {
   display: flex;
   width: 40vw;
@@ -41,10 +41,8 @@
 }
 
 .right-game-area img{
-
   width: 100%;
   height: 40vh;
-  
 }
 
 /* Área teclado y controles */

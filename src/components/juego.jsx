@@ -5,7 +5,6 @@ import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
 import Vidas from "../json/vidas.json";
 
-
 const Juego = () => {
   const [palabraElegida, setPalabraElegida] = useState("");
   const [palabraEnmascarada, setPalabraEnmascarada] = useState("");
@@ -77,9 +76,8 @@ const Juego = () => {
         setFinJuego(true);
       }
     }
-    console.log(palabraActualizada," - ",palabraElegida);
-    console.log(palabraActualizada === palabraElegida);
-    
+  
+    /* Controlar si el contenido de ambos arrays son iguales, para saber si ganó el jugador */
     if (palabraActualizada.every((value, index) => value === palabraElegida[index])) {
       //Deshabilitar teclado
       //Mostrar imágen victoria
