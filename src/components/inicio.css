@@ -2,40 +2,49 @@ body{
     display: flex;
     justify-content: center;
     width: auto;
+    height: 80vh;
 }
-.section{
+
+.parrafoinicio{
+    width: auto;
+    height: 20vh;
+    text-align: center;
+    text-shadow: 6px 8px 2px black;
+}
+
+#inicio-titulo{
+    font-size: 50px;
+}
+
+#inicio-texto1{
+    font-size: 30px;
+}
+
+.contenedor{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: auto;
+    height: 60vh;
 }
 
-.inicio-img{
-    height: 100vh;
-    width: 200vh;
+.contenedor img{
+    height: 45vh;
+    width: auto;
 }
 
 .inicio-img img{
     height: auto;
     width: 100%;
 }
-.parrafoinicio{
-    text-align: center;
-    text-shadow: 6px 8px 2px black;
-}
 
-#inicio-titulo{
-    font-size: 80px;
-}
-
-#inicio-texto1{
-    font-size: 50px;
-}
 #inicio-texto2{
-    font-size: 50px;
+    font-size: 20px;
+    padding-top: 5vh;
 }
 
 .boton-inicio{
-    font-size: 40px;
+    font-size: 30px;
     width: 100vh;
     height: 13vh;
 }
