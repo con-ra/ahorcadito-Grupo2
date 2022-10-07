@@ -1,53 +1,26 @@
-import Carousel from 'react-bootstrap/Carousel';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
+import integrantes from '../json/integrantes.json';
 import './integrantes.css'
 
 function Integrantes(){ 
   return (
-    <Carousel>
-      <Carousel.Item>
-        <img src="/assets/images/integrantes_LópezPolo.jpg" alt="López Polo"/>
-        <Carousel.Caption>
-          <h3>Lucas Santiago López Polo</h3>
-          <p><a href="https://twitter.com/EruLuka?t=-C9VnMVYIHm2oF1TakZvxA&s=09">Twitter</a></p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src="/assets/images/integrantes_MendivilCabrera.jpeg" alt="Mendivil Cabrera"/>
-        <Carousel.Caption>
-          <h3>Nicole Estefania Mendivil Cabrera</h3>
-          <p>
-            <a href="https://www.instagram.com/_nicoleca/">Instagram</a>
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src="/assets/images/integrantes_Planckensteiner.jpg" alt="Planckensteiner"/>
-        <Carousel.Caption>
-          <h3>German Matias Planckensteiner</h3>
-          <p>
-          <a href='https://www.instagram.com/mati_planck/'> Instagram </a>
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src="/assets/images/integrantes_SosaCorrea.jpeg" alt="Sosa Correa"/>
-        <Carousel.Caption>
-          <h3>Agustín Cesar Sosa Correa</h3>
-          <p>
-            <a href="https://www.facebook.com/profile.php?id=100014236481694">Facebook</a>
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src="/assets/images/integrantes_Velazquez.jpeg" alt="Velazquez"/>
-        <Carousel.Caption>
-          <h3>Conrado Abel Dario Velazquez</h3>
-          <p>
-            <a href='https://www.instagram.com/conra.ue/'> Instagram </a>
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <div className='integrantes'>
+      {integrantes.map(lista =>
+        <Card className='card-full' bg="dark">
+          <Card.Img className='card-img' variant="top" src={lista.img} />
+          <Card.Body>
+            <Card.Title>{lista.nombre}</Card.Title>
+            <Card.Text>
+              <Button variant='outline-light' border href={lista.github}>{lista.usuario}</Button>
+              <hr className='linea-central-tarjeta'/>
+              <p>Edad: {lista.edad} años</p>
+              <p>Intereses: {lista.intereses}</p>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      )}
+    </div>
   );
 }
 

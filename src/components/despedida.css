@@ -1,9 +1,17 @@
 .Parrafo{
+    text-align: center;
     text-shadow: 6px 8px 2px black;
 }
 
+.Despedida{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .Despedida img{
-    max-width: 40%;
+    max-width: 50%;
+    border: 10px solid purple;
     max-height: auto;
 }
 

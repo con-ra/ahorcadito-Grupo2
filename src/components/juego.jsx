@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import "./juego.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
 
@@ -12,6 +12,7 @@ const Juego = () => {
   );
   const [tecladoDeshabillitado, setTecladoDeshabilitado]= useState(true);
   const [letraElegida, setLetraElegida] = useState("");
+  const [contadorErrores, setContadorErrores] = useState(0);
 
   /* Generar botones abecedario */
   const botones = () => {
@@ -33,12 +34,38 @@ const Juego = () => {
   };
 
   /* Añadir letra presionada a una variable */
-  const presionarTecla = (letra) => {
-    setLetraElegida(letra);
+  const presionarTecla= (letra) => {
+    let palabraActualizada= palabraEnmascarada.map((l)=>(l));
+    /* setLetraElegida(letra); */
     document.getElementById(letra).disabled = true;
-    /* recorrer el vector buscando la letra */
+    let banderaError= true;
+    let contErrores = 0;
+    
+    for(let i=0; i<palabraElegida.length; i++)
+    {
+      if(letra === palabraElegida[i]){
+        palabraActualizada[i]= letra;
+        setPalabraEnmascarada(palabraActualizada);
+        //sonido de acierto NICOLE
+        banderaError=false;
+
+      }else{
+        //sonido error NICOLE
+        //cambia la imagen
+      }
+    }
+
+    if(banderaError){
+      contErrores = contadorErrores++;
+      setContadorErrores(1);
+    }
+
+    if(palabraActualizada===palabraElegida){
+      //sonido de victoria NICOLE
+    }
     /* Contador de errores con bandera */
     /* Comparar palabras para victoria */
+    //console.log(contadorErrores);
   }
 
   return (
