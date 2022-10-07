@@ -20,21 +20,29 @@
   flex-direction: column;
   text-align: center;
 }
-
+/* Pistas */
 .pistas-area {
   padding: 5% 5%;
   height: 30vh;
 }
-
+/* Palabra enmascarada */
 .palabra-area {
   padding: 5% 10%;
   letter-spacing: 1vw;
   font-size: xx-large;
   height: 20vh;
 }
-
+/* Imágen vidas restantes */
 .right-game-area {
+  display: flex;
   width: 40vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-game-area img{
+  width: 100%;
+  height: 40vh;
 }
 
 /* Área teclado y controles */
