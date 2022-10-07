@@ -34,7 +34,7 @@ const Juego = () => {
 
   /* Añadir letra presionada a una variable */
   const presionarTecla= (letra) => {
-    let palabraActualizada= palabraEnmascarada.map((l)=>(l));
+    let palabraActualizada= palabraEnmascarada.map(l => l);
     /* setLetraElegida(letra); */
     document.getElementById(letra).disabled = true;
     
