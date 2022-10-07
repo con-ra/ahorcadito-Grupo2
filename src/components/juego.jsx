@@ -4,9 +4,9 @@ import Button from "react-bootstrap/Button";
 import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
 import Vidas from "../json/vidas.json";
-import correcto from "/assets/sounds/correcto.wav";
-import error from "/assets/sounds/error.wav";
-import victoria  from "/assets/sounds/victoria.wav";
+//import correcto from "/assets/sounds/correcto.wav";
+//import error from "/assets/sounds/error.wav";
+//import victoria  from "/assets/sounds/victoria.wav";
 //import click from "/assets/sounds/click.wav";
 
 const Juego = () => {
