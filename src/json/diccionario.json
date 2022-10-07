@@ -48,5 +48,10 @@
         "id": 10,
         "pista": "Es una plataforma de desarollo colaborativo para colocar los proyectos, tambien conocido como la red social de los programadores",
         "palabra": "GITHUB"
+    },
+    {
+        "id": 11,
+        "pista": "Persona que tarbaja con lenguajes de programacion.",
+        "palabra": "PROGRAMADOR"
     }
 ]
