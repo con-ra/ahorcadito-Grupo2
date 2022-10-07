@@ -13,7 +13,8 @@ const Juego = () => {
   );
   const [tecladoDeshabillitado, setTecladoDeshabilitado] = useState(true);
   const [contadorErrores, setContadorErrores] = useState(0);
-  const [vidasRestantes, setVidasRestantes] = useState(Vidas[contadorErrores].img);
+  const [vidasRestantes, setVidasRestantes] = useState(Vidas[0].img);
+  const [finJuego, setFinJuego] = useState(false);
 
   /* Generar botones abecedario */
   const botones = () => {
@@ -45,36 +46,46 @@ const Juego = () => {
 
   /* Añadir letra presionada a una variable */
   const presionarTecla = (letra) => {
-    let palabraActualizada = palabraEnmascarada.map(l => l);
-    /* setLetraElegida(letra); */
-    document.getElementById(letra).disabled = true;
     let banderaError = true;
     let contErrores = contadorErrores;
+    /* Deshabilitar tecla presionada */
+    let palabraActualizada = palabraEnmascarada.map(l => l);
+    document.getElementById(letra).disabled = true;
 
+    /* Controlar si la letra está en la palabra y mostramos todas sus ocurrencias */
     for (let i = 0; i < palabraElegida.length; i++) {
       if (letra === palabraElegida[i]) {
         palabraActualizada[i] = letra;
         setPalabraEnmascarada(palabraActualizada);
-        //sonido de acierto NICOLE
         banderaError = false;
+        //sonido de acierto
       } else {
-        //sonido error NICOLE
-        //cambia la imagen
+        //sonido error
       }
     }
 
+    /* Si la letra no está en la palabra incrementar el contador de errores y actualizar imágen ahorcado */
     if (banderaError) {
       contErrores++;
-      setContadorErrores(contErrores);
-      setVidasRestantes(Vidas[contErrores].img);
+      console.log(contErrores," - ",Vidas.length);
+      if (contErrores <= (Vidas.length-1)){
+        setContadorErrores(contErrores);
+        setVidasRestantes(Vidas[contErrores].img);
+      }else{
+        setVidasRestantes("/assets/images/juego_perder.png");
+        setFinJuego(true);
+      }
     }
-
-    if (palabraActualizada === palabraElegida) {
+    console.log(palabraActualizada," - ",palabraElegida);
+    console.log(palabraActualizada === palabraElegida);
+    
+    if (palabraActualizada.every((value, index) => value === palabraElegida[index])) {
+      //Deshabilitar teclado
+      //Mostrar imágen victoria
       //sonido de victoria NICOLE
+      setVidasRestantes("/assets/images/juego_ganar.png");
+      setFinJuego(true);
     }
-    /* Contador de errores con bandera */
-    /* Comparar palabras para victoria */
-    //console.log(contadorErrores);
   };
 
   return (
