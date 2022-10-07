@@ -10,8 +10,8 @@
     {
         "img":"/assets/images/integrantes_MendivilCabrera.jpeg",
         "nombre":"Nicole Estefania Mendivil Cabrera",
-        "edad":"",
-        "intereses":"",
+        "edad":"24",
+        "intereses":"andar en bici, ver series",
         "usuario":"nicolee567",
         "github":"https://github.com/nicolee567"
     },
@@ -26,8 +26,8 @@
     {
         "img":"/assets/images/integrantes_SosaCorrea.jpeg",
         "nombre":"Agustín Cesar Sosa Correa",
-        "edad":"",
-        "intereses":"",
+        "edad":"19",
+        "intereses":"Voleyball, Videojuegos, Escuchar Musica, Programar",
         "usuario":"Gryuker",
         "github":"https://github.com/Gryuker"
     },
