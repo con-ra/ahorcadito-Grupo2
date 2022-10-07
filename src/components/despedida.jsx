@@ -1,4 +1,5 @@
-import "../components/despedida.css";
+import "./despedida.css";
+import Button from 'react-bootstrap/Button';
 
 function Despedida(){
     return(
@@ -10,6 +11,8 @@ function Despedida(){
         </div>
         <div className='Despedida'>
             <img src='/assets/images/Imagen Despedida.jpg' alt="Imagen Despedida"></img>
+            <p id="despedida-texto3">Para volver, haga click en el siguiente boton.</p>
+            <Button className="boton-despedida" variant="primary" size="lg" border href={"./"}>Volver a Inicio</Button>{' '}
         </div></>
     )
 }
