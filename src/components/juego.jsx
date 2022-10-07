@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
 
+
 const Juego = () => {
   const [palabraElegida, setPalabraElegida] = useState("");
   const [palabraEnmascarada, setPalabraEnmascarada] = useState("");
