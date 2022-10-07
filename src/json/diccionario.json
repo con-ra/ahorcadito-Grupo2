@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "pista": "Lenguaje de marcado, basico en la programacion web.",
+        "pista": "Lenguaje de marcado de hipertexto, basico en la programacion web, sirve para definir la estructura en la pagina web.",
         "palabra": "HTML"
     },
     {
@@ -26,7 +26,27 @@
     },
     {
         "id": 6,
-        "pista": "Es una plataforma de desarrollo colaborativo para alojar proyectos utilizando el sistema de control de versiones Git.",
+        "pista": "Protocolo de la capa de aplicacion en el modelo OSI.",
+        "palabra": "HTTP"
+    },
+    {
+        "id": 7,
+        "pista": "Generalmente genera lenguaje ensamblador primero y luego traduce el lenguaje ensamblador al lenguaje maquina",
+        "palabra": "COMPILADOR"
+    },
+    {
+        "id": 8,
+        "pista": "Es un conjunto de normas o reglas y pasos establecidos de manera clara sobre el flujo de informacion en una red estructurada.",
+        "palabra": "PROTOCOLO"
+    },
+    {
+        "id": 9,
+        "pista": "Se refire al valor del atributo que se va a modificar, se encuentra en el CSS",
+        "palabra": "PROPIEDAD"
+    },
+    {
+        "id": 10,
+        "pista": "Es una plataforma de desarollo colaborativo para colocar los proyectos, tambien conocido como la red social de los programadores",
         "palabra": "GITHUB"
     },
     {
