@@ -4,6 +4,10 @@ import Button from "react-bootstrap/Button";
 import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
 import Vidas from "../json/vidas.json";
+import correcto from "/assets/sounds/correcto.wav";
+import error from "/assets/sounds/error.wav";
+import victoria  from "/assets/sounds/victoria.wav";
+//import click from "/assets/sounds/click.wav";
 
 const Juego = () => {
   const [palabraElegida, setPalabraElegida] = useState("");
@@ -72,8 +76,10 @@ const Juego = () => {
         setPalabraEnmascarada(palabraActualizada);
         banderaError = false;
         //sonido de acierto
+        new Audio (correcto).play;//sonido correcto
       } else {
         //sonido error
+        new Audio (error).play;//sonido error
       }
     }
 
@@ -100,6 +106,7 @@ const Juego = () => {
       //sonido de victoria
       setVidasRestantes("/assets/images/you win.png");
       setFinJuego(true);
+      new Audio(victoria).play;//sonido ganar
     }
   };
 
