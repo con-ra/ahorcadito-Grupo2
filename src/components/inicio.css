@@ -9,12 +9,33 @@ body{
     align-items: center;
 }
 
-.logo-img{
-    height: auto;
-    width: 85vh;
+.inicio-img{
+    height: 100vh;
+    width: 200vh;
 }
 
-.logo-img img{
+.inicio-img img{
     height: auto;
     width: 100%;
+}
+.parrafoinicio{
+    text-align: center;
+    text-shadow: 6px 8px 2px black;
+}
+
+#inicio-titulo{
+    font-size: 80px;
+}
+
+#inicio-texto1{
+    font-size: 50px;
+}
+#inicio-texto2{
+    font-size: 50px;
+}
+
+.boton-inicio{
+    font-size: 40px;
+    width: 100vh;
+    height: 13vh;
 }
