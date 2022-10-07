@@ -86,7 +86,7 @@ const Juego = () => {
         setVidasRestantes(Vidas[contErrores].img);
       } else {
         /* Si no tiene vidas, pierde */
-        setVidasRestantes("/assets/images/juego_perder.png");
+        setVidasRestantes("/assets/images/game-over-1.png");
         setFinJuego(true);
       }
     }
@@ -98,7 +98,7 @@ const Juego = () => {
       )
     ) {
       //sonido de victoria
-      setVidasRestantes("/assets/images/juego_ganar.png");
+      setVidasRestantes("/assets/images/you win.png");
       setFinJuego(true);
     }
   };
