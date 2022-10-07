@@ -5,6 +5,7 @@
 
 .Despedida{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -24,4 +25,15 @@
 
 #despedida-texto2{
     font-size: 50px;
+}
+
+#despedida-texto3{
+    text-shadow: 6px 8px 2px black;
+    font-size: 50px;
+}
+
+.boton-despedida{
+    font-size: 40px;
+    width: 100vh;
+    height: 13vh;
 }
