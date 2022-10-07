@@ -11,7 +11,7 @@
     },
     {
         "id": 3,
-        "pista": "Leguaje de programacion origntado a objeto, con una de las comunidades mas grandes del mundo",
+        "pista": "Lenguaje de programacion orientado a objetos, con una de las comunidades mas grandes del mundo",
         "palabra": "JAVA"
     },
     {
@@ -21,7 +21,7 @@
     },
     {
         "id": 5,
-        "pista": "Pueden ser complicadas, algunas son ordinarias, sin...",
+        "pista": "Es una plantilla para la creación de objetos.",
         "palabra": "CLASS"
     },
     {
@@ -48,5 +48,27 @@
         "id": 10,
         "pista": "Es una plataforma de desarollo colaborativo para colocar los proyectos, tambien conocido como la red social de los programadores",
         "palabra": "GITHUB"
+        "pista": "Es una plataforma de desarrollo colaborativo para alojar proyectos utilizando el sistema de control de versiones Git.",
+        "palabra": "GITHUB"
+    },
+    {
+        "id": 7,
+        "pista": "Es el perfil profesional de entrada para trabajar en una empresa que se dedique al desarrollo de software.",
+        "palabra": "JUNIOR"
+    },
+    {
+        "id": 8,
+        "pista": "Es el lugar en el que se almacena y se puede realizar la distribución del código de una aplicación o un programa.",
+        "palabra": "REPOSITORIO"
+    },
+    {
+        "id": 9,
+        "pista": "Es una representación de cualquier item que puede ser utilizado en su juego o proyecto.",
+        "palabra": "ASSET"
+    },
+    {
+        "id": 10,
+        "pista": "Es el conjunto de instrucciones que un desarrollador ordena ejecutar a la computadora.",
+        "palabra": "CODIGO"
     }
 ]
