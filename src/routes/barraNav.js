@@ -5,7 +5,7 @@ import "./barraNav.css";
 
 const BarraNav = () => {
   return (
-    <div>
+    <>
       <Navbar className="navBg" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand href="#home">Grupo 2</Navbar.Brand>
@@ -31,7 +31,7 @@ const BarraNav = () => {
       <section>
         <Outlet></Outlet>
       </section>
-    </div>
+    </>
   );
 };
 
