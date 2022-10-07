@@ -50,22 +50,22 @@
         "palabra": "GITHUB"
     },
     {
-        "id": 7,
+        "id": 11,
         "pista": "Es el perfil profesional de entrada para trabajar en una empresa que se dedique al desarrollo de software.",
         "palabra": "JUNIOR"
     },
     {
-        "id": 8,
+        "id": 12,
         "pista": "Es el lugar en el que se almacena y se puede realizar la distribución del código de una aplicación o un programa.",
         "palabra": "REPOSITORIO"
     },
     {
-        "id": 9,
+        "id": 13,
         "pista": "Es una representación de cualquier item que puede ser utilizado en su juego o proyecto.",
         "palabra": "ASSET"
     },
     {
-        "id": 10,
+        "id": 14,
         "pista": "Es el conjunto de instrucciones que un desarrollador ordena ejecutar a la computadora.",
         "palabra": "CODIGO"
     }
