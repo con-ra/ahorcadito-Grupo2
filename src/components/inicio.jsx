@@ -5,7 +5,9 @@ function Inicio() {
   return (
     <>
       <section className="parrafoinicio">
-        <h3 id="inicio-titulo">Fundamentos de Programacion Web.</h3>
+        <h3 id="inicio-titulo">
+          Fundamentos de Programacion Web.
+          </h3>
         <p id="inicio-texto1">
           Bienvenidos al juego Ahorcadito realizado por el Grupo 2.
         </p>
