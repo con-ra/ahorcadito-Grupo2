@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Inicio from './components/inicio';
 import Integrantes from "./components/integrantes";
 import Juego from './components/juego';
