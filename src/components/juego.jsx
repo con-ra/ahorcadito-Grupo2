@@ -5,6 +5,7 @@ import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
 import Vidas from "../json/vidas.json";
 
+
 const Juego = () => {
   const [palabraElegida, setPalabraElegida] = useState("");
   const [palabraEnmascarada, setPalabraEnmascarada] = useState("");
