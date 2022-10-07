@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "img":"/assets/images/integrantes_LópezPolo.jpg",
         "nombre":"Lucas Santiago López Polo",
         "edad":"19",
@@ -8,6 +9,7 @@
         "github":"https://github.com/EruLuka"
     },
     {
+        "id": 2,
         "img":"/assets/images/integrantes_MendivilCabrera.jpeg",
         "nombre":"Nicole Estefania Mendivil Cabrera",
         "edad":"24",
@@ -16,6 +18,7 @@
         "github":"https://github.com/nicolee567"
     },
     {
+        "id": 3,
         "img":"/assets/images/integrantes_Planckensteiner.jpg",
         "nombre":"German Matias Planckensteiner",
         "edad":"",
@@ -24,6 +27,7 @@
         "github":"https://github.com/odoexx"
     },
     {
+        "id": 4,
         "img":"/assets/images/integrantes_SosaCorrea.jpeg",
         "nombre":"Agustín Cesar Sosa Correa",
         "edad":"19",
@@ -32,10 +36,11 @@
         "github":"https://github.com/Gryuker"
     },
     {
+        "id": 5,
         "img":"/assets/images/integrantes_Velazquez.jpeg",
         "nombre":"Conrado Abel Dario Velazquez",
-        "edad":"",
-        "intereses":"",
+        "edad":"39",
+        "intereses":"programación, videojuegos, tecnología",
         "usuario":"con-ra",
         "github":"https://github.com/con-ra"
     }

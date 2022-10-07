@@ -3,6 +3,7 @@ import "./juego.css";
 import { useEffect, useState } from "react";
 import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
+import Vidas from "../json/vidas.json";
 
 const Juego = () => {
   const [palabraElegida, setPalabraElegida] = useState("");
@@ -10,14 +11,23 @@ const Juego = () => {
   const [pista, setPista] = useState(
     'Haz click en "Obtener palabra" para empezar'
   );
-  const [tecladoDeshabillitado, setTecladoDeshabilitado]= useState(true);
-  const [letraElegida, setLetraElegida] = useState("");
+  const [tecladoDeshabillitado, setTecladoDeshabilitado] = useState(true);
   const [contadorErrores, setContadorErrores] = useState(0);
+  const [vidasRestantes, setVidasRestantes] = useState(Vidas[contadorErrores].img);
 
   /* Generar botones abecedario */
   const botones = () => {
     return Alfabeto.map((letra) => {
-      return <Button id={letra} key={letra} disabled={tecladoDeshabillitado} onClick={()=>presionarTecla(letra)}> {letra} </Button>;
+      return (
+        <Button
+          id={letra}
+          key={letra}
+          disabled={tecladoDeshabillitado}
+          onClick={() => presionarTecla(letra)}
+        >
+          {letra}
+        </Button>
+      );
     });
   };
 
@@ -34,39 +44,38 @@ const Juego = () => {
   };
 
   /* Añadir letra presionada a una variable */
-  const presionarTecla= (letra) => {
-    let palabraActualizada= palabraEnmascarada.map(l => l);
+  const presionarTecla = (letra) => {
+    let palabraActualizada = palabraEnmascarada.map(l => l);
     /* setLetraElegida(letra); */
     document.getElementById(letra).disabled = true;
-    let banderaError= true;
-    let contErrores = 0;
-    
-    for(let i=0; i<palabraElegida.length; i++)
-    {
-      if(letra === palabraElegida[i]){
-        palabraActualizada[i]= letra;
+    let banderaError = true;
+    let contErrores = contadorErrores;
+
+    for (let i = 0; i < palabraElegida.length; i++) {
+      if (letra === palabraElegida[i]) {
+        palabraActualizada[i] = letra;
         setPalabraEnmascarada(palabraActualizada);
         //sonido de acierto NICOLE
-        banderaError=false;
-
-      }else{
+        banderaError = false;
+      } else {
         //sonido error NICOLE
         //cambia la imagen
       }
     }
 
-    if(banderaError){
-      contErrores = contadorErrores++;
-      setContadorErrores(1);
+    if (banderaError) {
+      contErrores++;
+      setContadorErrores(contErrores);
+      setVidasRestantes(Vidas[contErrores].img);
     }
 
-    if(palabraActualizada===palabraElegida){
+    if (palabraActualizada === palabraElegida) {
       //sonido de victoria NICOLE
     }
     /* Contador de errores con bandera */
     /* Comparar palabras para victoria */
     //console.log(contadorErrores);
-  }
+  };
 
   return (
     <>
@@ -81,13 +90,17 @@ const Juego = () => {
             </div>
           </article>
           <article className="right-game-area">
-            <img src="" alt="imágen ahorcado"></img>
+            <img src={vidasRestantes} alt="imágen ahorcado"></img>
           </article>
         </section>
         <footer className="inf-game-area">
           <div className="teclado"> {botones()} </div>
           <div className="controles">
-            <Button className="button-iniciar" variant="secondary" onClick={() => iniciarJugada()}>
+            <Button
+              className="button-iniciar"
+              variant="secondary"
+              onClick={() => iniciarJugada()}
+            >
               Obtener palabra
             </Button>
           </div>
