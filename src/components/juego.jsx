@@ -76,10 +76,10 @@ const Juego = () => {
         setPalabraEnmascarada(palabraActualizada);
         banderaError = false;
         //sonido de acierto
-        new Audio (correcto).play;//sonido correcto
+        //new Audio (correcto).play;//sonido correcto
       } else {
         //sonido error
-        new Audio (error).play;//sonido error
+        //new Audio (error).play;//sonido error
       }
     }
 
@@ -106,7 +106,7 @@ const Juego = () => {
       //sonido de victoria
       setVidasRestantes("/assets/images/you win.png");
       setFinJuego(true);
-      new Audio(victoria).play;//sonido ganar
+      //new Audio(victoria).play;//sonido ganar
     }
   };
 
