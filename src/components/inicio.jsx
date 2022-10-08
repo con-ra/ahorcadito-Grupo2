@@ -2,6 +2,7 @@ import "./inicio.css";
 import Button from "react-bootstrap/Button";
 
 function Inicio() {
+  const sonidoClic=new Audio("/assets/sounds/click.wav");
   return (
     <>
       <section className="parrafoinicio">
@@ -24,6 +25,7 @@ function Inicio() {
           variant="primary"
           size="lg"
           border="ligth"
+          onClick={()=>sonidoClic.play()}
           href={"./juego"}
         >
           Jugar

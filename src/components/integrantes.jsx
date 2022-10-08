@@ -4,6 +4,7 @@ import ListaIntegrantes from "../json/integrantes.json";
 import "./integrantes.css";
 
 function Integrantes() {
+  const sonidoClic=new Audio("/assets/sounds/click.wav");
   return (
     <div className="integrantes">
       {ListaIntegrantes.map((lista) => (
@@ -12,7 +13,7 @@ function Integrantes() {
           <Card.Body>
             <Card.Title>{lista.nombre}</Card.Title>
             <Card.Text>
-              <Button variant="outline-light" border="success" href={lista.github}>
+              <Button variant="outline-light" border="success" onClick={()=>sonidoClic.play()} href={lista.github}>
                 {lista.usuario}
               </Button>
               <hr className="linea-central-tarjeta" />
