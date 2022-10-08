@@ -4,10 +4,6 @@ import Button from "react-bootstrap/Button";
 import Alfabeto from "../json/alfabeto.json";
 import Diccionario from "../json/diccionario.json";
 import Vidas from "../json/vidas.json";
-//import correcto from "/assets/sounds/correcto.wav";
-//import error from "/assets/sounds/error.wav";
-//import victoria  from "/assets/sounds/victoria.wav";
-//import click from "/assets/sounds/click.wav";
 
 const Juego = () => {
   const [palabraElegida, setPalabraElegida] = useState("");
@@ -19,6 +15,10 @@ const Juego = () => {
   const [contadorErrores, setContadorErrores] = useState(0);
   const [vidasRestantes, setVidasRestantes] = useState(Vidas[0].img);
   const [finJuego, setFinJuego] = useState(false);
+  const sonidoCorrecto=new Audio("/assets/sounds/correcto.wav");
+  const sonidoError=new Audio("/assets/sounds/error.wav");
+  const sonidoVictoria=new Audio("/assets/sounds/victoria.wav");
+  const sonidoClic=new Audio("/assets/sounds/click.wav");
   /* Habilitar / Deshabilitar botones dependiendo si es fin de juego */
   useEffect(() => {
     Alfabeto.map((letra) => {
@@ -47,7 +47,7 @@ const Juego = () => {
     let indPalabra = Math.floor(Math.random() * Diccionario.length);
     let arrayPalabra = Array.from(Diccionario[indPalabra].palabra);
     let arrayPalabraEnmascarada = Array(arrayPalabra.length).fill("_");
-
+    sonidoClic.play();
     setPalabraElegida(arrayPalabra);
     setPista(Diccionario[indPalabra].pista);
     setPalabraEnmascarada(arrayPalabraEnmascarada);
@@ -76,16 +76,16 @@ const Juego = () => {
         setPalabraEnmascarada(palabraActualizada);
         banderaError = false;
         //sonido de acierto
-        //new Audio (correcto).play;//sonido correcto
+        sonidoCorrecto.play();//sonido correcto
       } else {
-        //sonido error
-        //new Audio (error).play;//sonido error
+        //sonido error//sonido error
       }
     }
 
     /* Controlar si la letra no está en la palabra e incrementar el contador de errores en ese caso*/
     if (banderaError) {
       contErrores++;
+      sonidoError.play();
       /* Mientras tenga vidas disponibles, incrementeo el contador de errores y actualizo la imagen del ahoracado */
       if (contErrores <= Vidas.length - 1) {
         setContadorErrores(contErrores);
@@ -106,7 +106,7 @@ const Juego = () => {
       //sonido de victoria
       setVidasRestantes("/assets/images/you win.png");
       setFinJuego(true);
-      //new Audio(victoria).play;//sonido ganar
+      sonidoVictoria.play();//sonido ganar
     }
   };
 

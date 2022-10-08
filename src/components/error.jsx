@@ -2,6 +2,7 @@ import "./error.css";
 import Button from 'react-bootstrap/Button';
 
 function Error(){
+    const sonidoClic=new Audio("/assets/sounds/click.wav");
     return(
         <>
         <div className="Error">
@@ -11,7 +12,7 @@ function Error(){
           <ul id="error-texto2">Para volver haga click en el boton "Inicio".</ul>
         </div>
         <div className="Boton-Error">
-        <Button className="boton-error" variant="primary" size="lg" border href={"./"}>Inicio</Button>{' '}
+        <Button className="boton-error" variant="primary" size="lg" onClick={()=>sonidoClic.play()} border href={"./"}>Inicio</Button>{' '}
         </div>
         </>
 
