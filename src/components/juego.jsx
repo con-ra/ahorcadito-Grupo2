@@ -15,10 +15,13 @@ const Juego = () => {
   const [contadorErrores, setContadorErrores] = useState(0);
   const [vidasRestantes, setVidasRestantes] = useState(Vidas[0].img);
   const [finJuego, setFinJuego] = useState(false);
-  const sonidoCorrecto=new Audio("/assets/sounds/correcto.wav");
-  const sonidoError=new Audio("/assets/sounds/error.wav");
-  const sonidoVictoria=new Audio("/assets/sounds/victoria.wav");
-  const sonidoClic=new Audio("/assets/sounds/click.wav");
+  /* Sonidos */
+  const sonidoCorrecto = new Audio("/assets/sounds/correcto.wav");
+  const sonidoError = new Audio("/assets/sounds/error.wav");
+  const sonidoVictoria = new Audio("/assets/sounds/victoria.wav");
+  const sonidoClic = new Audio("/assets/sounds/click.wav");
+  const sonidoDerrota = new Audio("/assets/sounds/derrota.wav");
+
   /* Habilitar / Deshabilitar botones dependiendo si es fin de juego */
   useEffect(() => {
     Alfabeto.map((letra) => {
@@ -55,8 +58,10 @@ const Juego = () => {
     setContadorErrores(0);
     setVidasRestantes(Vidas[0].img);
     setFinJuego(false);
+    /* Recorrer los botones para inicializar su estado deshabilitado y color */
     Alfabeto.map((letra) => {
       document.getElementById(letra).disabled = false;
+      document.getElementById(letra).style.backgroundColor = "blue";
     });
   };
 
@@ -76,9 +81,8 @@ const Juego = () => {
         setPalabraEnmascarada(palabraActualizada);
         banderaError = false;
         //sonido de acierto
-        sonidoCorrecto.play();//sonido correcto
-      } else {
-        //sonido error//sonido error
+        sonidoCorrecto.play();
+        document.getElementById(letra).style.backgroundColor = "green";
       }
     }
 
@@ -86,12 +90,14 @@ const Juego = () => {
     if (banderaError) {
       contErrores++;
       sonidoError.play();
+      document.getElementById(letra).style.backgroundColor = "red";
       /* Mientras tenga vidas disponibles, incrementeo el contador de errores y actualizo la imagen del ahoracado */
       if (contErrores <= Vidas.length - 1) {
         setContadorErrores(contErrores);
         setVidasRestantes(Vidas[contErrores].img);
       } else {
         /* Si no tiene vidas, pierde */
+        sonidoDerrota.play();
         setVidasRestantes("/assets/images/game-over-1.png");
         setFinJuego(true);
       }
@@ -106,7 +112,7 @@ const Juego = () => {
       //sonido de victoria
       setVidasRestantes("/assets/images/you win.png");
       setFinJuego(true);
-      sonidoVictoria.play();//sonido ganar
+      sonidoVictoria.play(); //sonido ganar
     }
   };
 
