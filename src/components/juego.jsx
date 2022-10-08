@@ -47,7 +47,7 @@ const Juego = () => {
     let indPalabra = Math.floor(Math.random() * Diccionario.length);
     let arrayPalabra = Array.from(Diccionario[indPalabra].palabra);
     let arrayPalabraEnmascarada = Array(arrayPalabra.length).fill("_");
-
+    sonidoClic.play();
     setPalabraElegida(arrayPalabra);
     setPista(Diccionario[indPalabra].pista);
     setPalabraEnmascarada(arrayPalabraEnmascarada);
@@ -78,7 +78,7 @@ const Juego = () => {
         //sonido de acierto
         sonidoCorrecto.play();//sonido correcto
       } else {
-        //sonido error
+        //sonido error//sonido error
       }
     }
 
@@ -106,7 +106,7 @@ const Juego = () => {
       //sonido de victoria
       setVidasRestantes("/assets/images/you win.png");
       setFinJuego(true);
-      //new Audio(victoria).play;//sonido ganar
+      sonidoVictoria.play();//sonido ganar
     }
   };
 

@@ -2,6 +2,7 @@ import "./despedida.css";
 import Button from 'react-bootstrap/Button';
 
 function Despedida(){
+    const sonidoClic=new Audio("/assets/sounds/click.wav");
     return(
          <>
         <div className='Parrafo'>
@@ -11,7 +12,7 @@ function Despedida(){
         <div className='Despedida'>
             <img src='/assets/images/ImagenDeDespedida.png' alt="Imagen Despedida"></img>
             <p id="despedida-texto3">Para volver, haga click en el siguiente boton.</p>
-            <Button className="boton-despedida" variant="primary" size="lg" border href={"./"}>Volver a Inicio</Button>{' '}
+            <Button className="boton-despedida" variant="primary" size="lg" onClick={()=>sonidoClic.play()} border href={"./"}>Volver a Inicio</Button>{' '}
         </div></>
     )
 }
